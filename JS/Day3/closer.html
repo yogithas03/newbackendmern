@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="assets/closerfunction.js">
+       
+        // const bankBalance = ()=>{
+        //     let balance = 1000
+
+        //     return{
+        //       withdraw: (amount)=>{
+        //         if(amount>balance){
+        //             console.log('balance insufficent')
+        //         } 
+        //         balance-=amount;                                                                           
+        //     },
+        //       saving: (amount)=>{
+            //       balance+=amount;
+        // },
+        //     } 
+
+        // }
+        // const bank = bankBalance()
+        // console.log(bankAmount())
+
+        const bankDetails =(callback)=>{
+              callback();
+        }
+        const credit =()=>{
+            console.log('credited')
+        }
+        const withdraw =()=>{
+            console.log('withdraw')
+        }
+        const balance =()=>{
+            console.log('total balance')
+        }
+        bankDetails(credit);
+        bankDetails(withdraw);
+        bankDetails(balance);
+      
+    //   linebreak
+    </script>
+
+</body>
+</html>
