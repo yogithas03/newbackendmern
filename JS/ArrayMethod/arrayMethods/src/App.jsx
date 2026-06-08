@@ -1,23 +1,29 @@
-import { Route, Routes } from "react-router-dom";
-import Navbar from "./Components/Navbar";
+import { Routes, Route } from "react-router-dom";
+
 import Home from "./Pages/Home";
-import Methods from "./Pages/Methods";
+import ArrayMethods from "./Pages/ArrayMethods";
+import MethodDetails from "./Pages/MethodDetails";
+import Quiz from "./Pages/Quiz";
 
-
-
-
-
-const App =()=> {
+function App() {
   return (
-    <>
-    <Navbar/>
-    
+    <div className="min-h-screen bg-[#050816] text-white">
     <Routes>
-    <Route path="/" element={<Home/>}/>
-    <Route path="/methods" element={<Methods/>}/>
+      <Route path="/" element={<Home />} />
+
+      <Route
+        path="/array-methods"
+        element={<ArrayMethods />}
+      />
+
+      <Route
+        path="/array-methods/:id"
+        element={<MethodDetails />}
+      />
+
+      <Route path="/quiz" element={<Quiz />} />
     </Routes>
-  
-    </>
+    </div>
   );
 }
 
