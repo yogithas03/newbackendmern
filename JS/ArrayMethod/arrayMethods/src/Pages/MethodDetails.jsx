@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import MethodContent from "../components/MethodContent";
+import Navbar from "../Components/Navbar";
+import MethodContent from "../Components/MethodContent";
 import { arrayMethods } from "../data/arrayMethods";
 
 const MethodDetails=()=>{

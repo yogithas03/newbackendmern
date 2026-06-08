@@ -1,3 +1,5 @@
+
+
 const QuizCard=({ question, options ,answer})=>{
   const checkAnswer = (option)=>{
     if (option===answer) {

@@ -1,4 +1,8 @@
-function MethodContent({ method }) {
+
+
+
+
+const MethodContent=({ method })=>{
   return (
     <div className="content-card">
 

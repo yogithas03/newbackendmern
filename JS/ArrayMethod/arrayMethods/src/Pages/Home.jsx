@@ -9,6 +9,7 @@ const Home = () => {
     <>
     <Navbar/>
     <Hero/>
+    
     <section className="max-w-7xl mx-auto px-6 py-16">
        <h2 className="font-bold text-2xl mb-1">What is Array?</h2>
 

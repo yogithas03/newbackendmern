@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import Navbar from "../components/Navbar";
-import SearchBar from "../components/SearchBar";
-import MethodGrid from "../components/MethodGrid";
+import Navbar from "../Components/Navbar";
+import SearchBar from "../Components/SearchBar";
+import MethodGrid from "../Components/MethodGrid";
 
 import { arrayMethods } from "../data/arrayMethods";
 

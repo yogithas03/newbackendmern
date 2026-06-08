@@ -5,7 +5,7 @@ import ArrayMethods from "./Pages/ArrayMethods";
 import MethodDetails from "./Pages/MethodDetails";
 import Quiz from "./Pages/Quiz";
 
-function App() {
+const App=()=>{
   return (
     <div className="min-h-screen bg-[#050816] text-white">
     <Routes>

@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import heroImage from "../assets/Version control-amico.svg";
+
+
+
 const Hero=()=>{
   const navigate = useNavigate();
 

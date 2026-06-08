@@ -1,3 +1,5 @@
+
+
 export const quizData = [
   {
     question: "Which method adds item at end?",

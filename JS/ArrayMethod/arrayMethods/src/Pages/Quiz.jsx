@@ -1,8 +1,8 @@
-import Navbar from "../components/Navbar";
-import QuizCard from "../components/QuizCard";
+import Navbar from "../Components/Navbar";
+import QuizCard from "../Components/QuizCard";
 import { quizData } from "../data/quizData";
 
-function Quiz() {
+const Quiz=()=>{
   return (
     <div className="min-h-screen bg-[#050816] text-white">
       <Navbar />
