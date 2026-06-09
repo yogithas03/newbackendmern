@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Create a student profile using Template Literals and display the student's 
+        // name, course, city, and institute in a formatted output.
+
+        let studentProfile ={studentName:"Aashika",
+            course:"Backend",city:"chennai",institute:"SLA"
+        }
+        console.log(`Student Name : ${studentProfile.studentName} Course: ${studentProfile.course}
+                     City: ${studentProfile.city} Institute: ${studentProfile.institute}`);
+
+        
+        // Create an Arrow Function that accepts employee details and calculates the yearly 
+        // salary from the monthly salary.
+
+        const employeeDetails = (monthlysalary)=>{
+               return monthlysalary*12;
+        }
+        console.log("Employee yearly salary:",employeeDetails(10000))
+
+        // Create an Arrow Function that accepts a product price and discount percentage and
+        //  returns the final discounted price.
+
+         const productDetails =(pprice,discount)=>{
+            return pprice-(pprice*discount/100);
+        }
+        console.log("The finaly price of the product is",productDetails(4000,80))
+
+        // Create a user registration function using Default Parameters. If no role is provided, 
+        // automatically assign a default role.
+
+        const registration=(role="frontent developer")=>{
+            console.log("The role is",role)
+        }
+        registration();
+
+        // Create a shopping cart function using Rest Parameters that accepts multiple product prices 
+        // and calculates the total bill amount.
+
+        const shoppingCart = (...bills)=>{
+            let totalBills= 0;
+            for(let bill of bills){
+                totalBills+=bill;
+            }
+        return totalBills;
+        }
+        console.log("Total bills:",shoppingCart(300,500,4600,243,500))
+
+        // Given two arrays containing frontend and backend technologies, merge them into a
+        //  single array using the Spread Operator.
+
+        let fnd = ["html","css","javascript","mysql","bootstrap"]
+        let bnd =["mongoDB","react","express","node"]
+
+        let singlearray = [...fnd,...bnd]
+        console.log(singlearray);
+
+
+        // Create a copy of an employee object and add new properties such as department,
+        //  experience, and salary without modifying the original object.
+
+        let employee={employeeName:"Kanitaa",role:"analyst"}
+
+        let emp = {...employee,experience:"2years",salary:25000};
+        
+        console.log(emp)
+        console.log(employee)
+
+        // Given a student object containing multiple properties, extract all values 
+        // into separate variables using Object Destructuring and display them.
+       
+        let studentObject ={studentName:"Aashika",
+            course:"Backend",city:"chennai"}
+
+          const{studentName,course,city}=studentObject;
+          console.log(studentName);
+          console.log(course);
+          console.log(city);
+
+        //   Create an object using Enhanced Object Literals without manually assigning 
+        // property names and values.
+
+        const age=23
+        const details ={nameof:"jayanthi",age,city:"namakkal"}
+        console.log(details);
+
+        // Create a user dashboard system that safely accesses nested properties 
+        // such as profile, address, and city using Optional Chaining and displays a 
+        // default value using Nullish Coalescing when data is unavailable.
+
+        const user={
+          profile:{
+            name:"yogi",
+            address:{
+                state:"TamilNadu",
+                city:"Chennai"
+            }
+          }
+        }
+        const userDashboard=(userData)=>{
+              const name = userData.profile?.name??"name is not available";
+              const city = userData.profile?.address?.city??"city is not available";
+
+         console.log(`Name: ${name}`);
+         console.log(`City: ${city}`);
+        }
+        
+         userDashboard(user);
+
+
+        // Create a function that accepts multiple student marks using Rest Parameters and returns the highest mark.
+
+        const studentsMark =(...marks)=>{
+            return Math.max(...marks);
+        }
+        console.log(studentsMark(29,78,99,67,45))
+
+        // Create a function that merges multiple arrays of courses into a single 
+        // array using the Spread Operator.
+
+        const frontend = ["html","css","javascript","mysql","bootstrap"]
+        const backend =["mongoDB","react","express","node"]
+        const dataanalyst =["NLP","CV","AI"]
+        const coursedet =()=>{
+             return [...frontend,...backend,...dataanalyst];
+        }
+        console.log(coursedet());
+
+        // Create a function that clones a product object and updates the stock quantity without 
+        // modifying the original object.
+
+         const productdet = {productName:"apple", 
+                           productFrom:"Kashmir",
+                           productPrice:250,
+                           productStock:"4kg",
+                           productQuantity:"1kg"}
+        const updatestock =(product,newstock)=>{
+                   return{
+                    ...product,
+                    productStock:newstock
+                   }
+        }
+        const modifyObj = updatestock(productdet,"6kg")
+        
+        console.log("modifyObj:",modifyObj);
+        console.log("productdet:",productdet)
+
+
+        // Create a function that receives a user object and displays user information using Object 
+        // Destructuring and Template Literals.
+
+        const information = {username:"yogitha@03",
+                            password:"Jarvis&2804"}
+
+        const login =(userinfo)=>{
+            const {username,password}=userinfo;
+            return `username:${username},password:${password}`;
+        }
+        console.log(login(information));
+
+        // Build a mini Employee Management System using only ES6+ features such as:Arrow Functions
+        // Template Literals,Destructuring,Spread Operator,Rest Parameters,Default Parameters,Optional Chaining
+        // ,Nullish Coalescing,Enhanced Object Literals and implement:Add Employee,Update Employee,Display Employee
+        // Calculate Salary
+
+
+         let employees = [];
+
+         const addEmployee = (
+                      id,
+                     name,
+                     role = "Trainee",
+                     city = "Chennai",
+                     monthlySalary = 15000,
+                     department = null) => {
+
+        const employee = {
+        id,
+        name,
+        role,
+        city,
+        monthlySalary,
+        department};
+
+        employees.push(employee);
+
+            console.log(`Employee ${name} added successfully`);
+        };
+
+
+          const displayEmployees = () => {
+
+            console.log("EMPLOYEE DETAILS");
+
+           employees.forEach((emp) => {
+
+          const {
+            id,
+            name,
+            role,
+            city,
+            monthlySalary,
+            department
+            } = emp;
+
+           console.log(`
+                       Employee ID     : ${id}
+                       Employee Name   : ${name}
+                       Role            : ${role}
+                       City            : ${city}
+                       Department      : ${department ?? "Not Assigned"}
+                       Monthly Salary  : ₹${monthlySalary}
+                       `);
+                    });
+                 };
+            const updateEmployee = (id, updates) => {
+
+                 employees = employees.map((emp) =>emp.id === id?{ ...emp, ...updates }: emp);
+
+            console.log(`Employee ${id} updated successfully`);
+           };
+            const calculateSalary = (monthlySalary) => monthlySalary * 12;
+            const showSalary = (id) => {
+
+            const employee = employees.find((emp) => emp.id === id);
+
+            const name = employee?.name ?? "Employee Not Found";
+
+            const salary = employee?.monthlySalary ?? 0;
+
+            console.log(`Employee Name : ${name} Yearly Salary : ₹${calculateSalary(salary)}`);
+          };
+            const addMultipleEmployees = (...empList) => {employees.push(...empList);
+              console.log(`${empList.length} employees added successfully`);
+         };
+            const searchEmployee = (id) => {
+                const employee = employees.find((emp) => emp.id === id);
+                console.log(employee?.name? `Employee Found : ${employee.name}`: "Employee Not Found");
+           };
+addEmployee(
+    101,
+    "Aashika",
+    "Backend Developer",
+    "Chennai",
+    30000,
+    "IT"
+);
+
+addEmployee(
+    102,
+    "Kanitaa",
+    "Data Analyst",
+    "Bangalore",
+    35000
+);
+
+addMultipleEmployees(
+    {
+        id: 103,
+        name: "Yogitha",
+        role: "Frontend Developer",
+        city: "Hyderabad",
+        monthlySalary: 28000,
+        department: "IT"
+    },
+
+    {
+        id: 104,
+        name: "Priya",
+        role: "Tester",
+        city: "Mumbai",
+        monthlySalary: 25000,
+        department: "QA"
+    }
+);
+
+displayEmployees();
+
+updateEmployee(102, {
+    role: "Senior Data Analyst",
+    monthlySalary: 45000
+});
+displayEmployees();
+showSalary(102);
+searchEmployee(103);
+searchEmployee(999);
+
+
+
+       
+
+
+        
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
