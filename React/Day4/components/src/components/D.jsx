@@ -9,10 +9,9 @@ const DashBoard = ({dashboard}) => {
 
   return (
     <>
-     
-
-          
-        <h1><FaSchoolFlag />School Management System</h1>
+    
+    
+      <h1><FaSchoolFlag />School Management System</h1>
         <div>
             <h1><FaSchool />Total School{dashboard.length}</h1>
 
@@ -27,18 +26,6 @@ const DashBoard = ({dashboard}) => {
             <p key={i}>{e}</p>
           ))}
 
-        <div>
-            <h1>Schools</h1>
-            <div>
-                <h1></h1>
-            </div>
-        </div>
-    
-      
-
-
-     
-      
     </>
   )
 }

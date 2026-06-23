@@ -1,0 +1,81 @@
+<script>
+
+// Task 1: Array of Objects - Employee Salary   Requirements: Return employees whose salary > 40000 Use filter()
+
+
+
+const employees =[{id: 1, name: "Ravi", salary: 25000 },
+                  {id: 2, name: "Priya", salary: 45000 },
+                  {id: 3, name: "Arun", salary: 55000 }];
+
+const getHighSalaryEmployees = () => {
+
+     const  highestSalary = employees.filter(e =>e.salary>40000)
+
+     return highestSalary
+ }
+
+const result = getHighSalaryEmployees()
+console.log(result)
+
+
+
+// Task 2: Array of Objects - Product Names Requirements: Return only product names Use map()
+
+const products = [ { id: 1, name: "Laptop", price: 50000 }, 
+                   { id: 2, name: "Mobile", price: 20000 }, 
+                   { id: 3, name: "Watch", price: 3000 } ]; 
+                   
+const getProductNames = () => {
+
+    const newProduct = products.map((products)=>{
+        return products.name
+    })
+
+    return newProduct
+} 
+const productName = getProductNames()
+console.log(productName)
+
+// Task 3: Object Values Sum  Task Create a function:  Requirements: Get all object values Calculate total Use Object.values() + reduce()
+
+ const marks = { html: 80, css: 90, js: 85 };
+
+ const calculateTotalMarks = () => {
+ const total = Object.values(marks).reduce((acc,mark)=>{
+        return acc+mark
+ })
+ return total;
+   }
+ const totalMarks = calculateTotalMarks()
+ console.log(totalMarks)
+
+//  Task 4: Find User  Task Create a function:  Requirements: Find user by id Use find()
+
+const users = [ { id: 1, name: "Ravi" }, 
+                { id: 2, name: "Priya"},
+                { id: 3, name: "Arun" } ]
+
+    const getUserById = () => {
+       const findId = users.find((users)=>users.id>2)
+       return findId
+    }
+    const userId = getUserById()
+    console.log(userId)
+
+    // Task 5: Group Students Task Create a function:  Requirements: Separate MERN students Separate Java students Use filter()
+   
+     const students = [ { name: "Ravi", course: "MERN" }, { name: "Priya", course: "Java" }, { name: "Arun", course: "MERN" } ] 
+     const groupByCourse = () => {
+        
+        const mernStudent = students.filter((students)=>students.course==="MERN")
+        const javaStudent = students.filter((students)=>students.course==="Java")
+        
+        return {
+            mernStudent,
+            javaStudent
+        }
+        }
+        console.log(groupByCourse())
+        
+</script>
