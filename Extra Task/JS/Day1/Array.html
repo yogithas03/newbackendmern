@@ -64,8 +64,8 @@ const users = [ { id: 1, name: "Ravi" },
      const students = [ { name: "Ravi", course: "MERN" }, { name: "Priya", course: "Java" }, { name: "Arun", course: "MERN" } ] 
      const groupByCourse = () => {
         
-        const mernStudent = students.filter((students)=>students.course==="MERN")
-        const javaStudent = students.filter((students)=>students.course==="Java")
+        const mernStudent = students.filter((student)=>student.course==="MERN")
+        const javaStudent = students.filter((student)=>student.course==="Java")
         
         return {
             mernStudent,
