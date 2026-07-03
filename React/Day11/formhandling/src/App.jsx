@@ -1,12 +1,17 @@
-import AppRoutes from "./routes/AppRoutes"
+
+import AppRoutes from "./Routes/AppRoutes"
 
 
 const App = () => {
-   return (
-    <>
-   
 
-      <AppRoutes/>
+
+
+
+  return (
+    <>
+
+  
+    <AppRoutes/>
       
     </>
   )

@@ -6,8 +6,7 @@ const StuLogin = () => {
 
     const navigate = useNavigate()
     const [details,setDetails]=useState({stuemail:"",stupassword:""})
-    const [save,setSave]=useState([])
-
+   
     const handleChange = (e) => {
         setDetails({...details,[e.target.name]:e.target.value})
     }
@@ -38,10 +37,12 @@ const StuLogin = () => {
 
   return (
     <>
-
-    <form onSubmit={handleClick}>
-    <label>Student Email</label>
-    <input type="email" name="stuemail" value={details.stuemail} onChange={handleChange} placeholder="Student Email"/><br />
+    <div className="bg-blue-950 text-white p-3 text-center">
+    Login
+        </div>
+    <form onSubmit={handleClick} >
+    <label >Student Email </label>
+    <input type="email" name="stuemail" value={details.stuemail} onChange={handleChange} placeholder="Student Email" /><br />
     <label>Student Password</label>
     <input type="password" name="stupassword" value={details.stupassword} onChange={handleChange} placeholder="Student Password"/><br />
     <input type="submit" value={"Login"}/>

@@ -1,46 +1,69 @@
 import { useState } from "react"
 
 
-
 const Register = () => {
 
-   const[data,setData]=useState({userName:" ",useEmail:" ",userCourse:" ",userCity:" "})
-   const[showdata,setShowData]=useState([])
+    const [studentData,setStudentData]=useState({studentname:"",studentage:"",studentcourse:"",studentcity:""})
+    const [datastore,setDataStore]=useState([])
 
-    const handleChange =(e)=>{
-         setData({...data,[e.target.name]:e.target.value})
-        
+    const handleChange = (e) => {
+
+        setStudentData({...studentData,[e.target.name]:e.target.value})
     }
-    const handleClick = (e)=>{
+    const handleClick = (e) => {
         e.preventDefault()
-        setShowData(prev=>[...prev,data])
-        console.log(showdata)
+  
+        if(studentData.studentage<18){
+            alert("This Age is Not Required!!")
+            return
+        }
+
+
+       setDataStore((prev)=>[...prev,studentData])
+       setStudentData({studentname:"",studentage:"",studentcourse:"",studentcity:""})
+
     }
+
   return (
     <>
-   
-    
-    <form className="text-center">
-        
-        
-        <label htmlFor="" className="text-center">Enter the Name </label>
-        <input type="text" className="border-2 text-black rounded-lg p-2 mt-3" name="userName" value={data.userName} onChange={handleChange}/><br />
-        <label htmlFor="" className="text-center">Enter the Email </label>
-        <input type="text" className="border-2  text-black rounded-lg p-2 mt-3" name="userEmail" value={data.userEmail} onChange={handleChange}/><br />
-        <label htmlFor="" className="text-center">Enter the Course </label>
-        <input type="text" className="border-2  text-black rounded-lg p-2 mt-3" name="userCourse" value={data.userCourse} onChange={handleChange}/><br />
-        <label htmlFor="" className="text-center">Enter the City </label>
-        <input type="text" className="border-2  text-black rounded-lg p-2 mt-3" name="userCity" value={data.userCity} onChange={handleChange}/><br />
-        <button className="bg-green-800 rounded-lg p-3 mt-4" onClick={handleClick}>Submit</button>
-
-      
-        
-         
-
+    <form onSubmit={handleClick}>
+        <div className="flex items-center gap-2 mt-3">
+            <label className="text-xl text-right w-150">Student's Name </label>
+            <input type="text" name="studentname" value={studentData.studentname} onChange={handleChange} placeholder="enter the name"
+             className="border-2 rounded-l p-2"/>
+        </div>
+        <div className="flex items-center gap-2 mt-3">
+            <label className="text-xl text-right w-150">Student's Age </label>
+            <input type="number" name="studentage" value={studentData.studentage} onChange={handleChange} placeholder="enter the age"
+            className="border-2 rounded-l p-2 "/>
+        </div>
+        <div className="flex items-center gap-2 mt-3">
+            <label className="text-xl text-right w-150">Student's Course </label>
+            <input type="text" name="studentcourse" value={studentData.studentcourse} onChange={handleChange} placeholder="enter the course"
+            className="border-2 rounded-l p-2"/>
+        </div>
+        <div className="flex items-center gap-2 mt-3">
+            <label className="text-xl text-right w-150">Student's City </label>
+            <input type="text" name="studentcity" value={studentData.studentcity} onChange={handleChange} placeholder="enter the city" 
+            className="border-2 rounded-l p-2"/>
+        </div>
+        <div className="flex justify-center mt-3 ml-10">
+            <button type="submit" className="bg-green-950 text-white rounded-lg w-25 p-3 ">submit</button>
+        </div>
     </form>
+
+    <div className="ml-7">
+        {datastore.map((e,i)=>(
+            <div key={i+1} className="border p-4 rounded-lg shadow-md mt-3 w-50">
+                <p>{e.studentname}</p>
+                <p>{e.studentage}</p>
+                <p>{e.studentcourse}</p>
+                <p>{e.studentcity}</p>
+            </div>
+        ))}
+    </div>
+
     
-    
-   
       
     </>
   )

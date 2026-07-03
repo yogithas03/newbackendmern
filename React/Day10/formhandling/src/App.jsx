@@ -1,16 +1,13 @@
-// import Register from "./form/Register"
-
-import EmployeeForm from "./form/EmployeeForm"
-import StudentDetails from "./form/StudentDetails"
+import AppRoutes from "./routes/AppRoutes"
 
 
 const App = () => {
-  return (
+   return (
     <>
+   
 
-    {/* <Register/> */}
-      <StudentDetails/>
-      <EmployeeForm/>
+      <AppRoutes/>
+      
     </>
   )
 }

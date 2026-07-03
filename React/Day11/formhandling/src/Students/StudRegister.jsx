@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 const StudRegister = () => {
 
     const [details,setDetails]=useState({stuname:"",stuemail:"",stupassword:""})
-    const [save,setSave]=useState([])
+   
     const navigate = useNavigate()
 
     const handleChange = (e) =>{

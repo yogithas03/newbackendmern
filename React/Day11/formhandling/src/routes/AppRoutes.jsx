@@ -1,26 +1,26 @@
-import { Routes, Route, Router } from "react-router-dom"
-import Register from "../form/Register"
-import Navbar from "../Components/Navbar"
-import ClassForm from "../form/ClassForm"
-import Employee from "../form/Employee"
-import ProductManagement from "../form/ProductManagement "
-import UserProfileForm from "../form/UserProfileForm"
-import SchoolManagementForm from "../form/SchoolManagementForm"
+import { Routes,Route } from "react-router-dom"
+// import Login from "../components/Login"
+// import Dashboard from "../components/Dashboard"
+// import Register from "../components/Register"
+import StudRegister from "../Students/StudRegister"
+import StuLogin from "../Students/StuLogin"
+import StuDashBoard from "../Students/StuDashBoard"
+
+
 
 const AppRoutes = () => {
   return (
     <>
-    <Navbar/>
-    <Routes>
-        
-        <Route path={"/"} element={<Register/>}/>
-        <Route path={"/employee"} element={<Employee/>}/>
-        <Route path={"/product"} element={<ProductManagement/>}/>
-        <Route path={"/userprofile"} element={<UserProfileForm/>}/>
-        <Route path={"/school"} element={<SchoolManagementForm/>}/>
-        <Route path={"/classform"} element={<ClassForm/>}/>
 
+    <Routes>
+      {/* <Route path="/" element={<Register/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/dashboard" element={<Dashboard/>}/> */}
+      <Route path="/" element={<StudRegister/>}/>
+      <Route path="/login" element={<StuLogin/>}/>
+      <Route path="/dashboard" element={<StuDashBoard/>}/>
     </Routes>
+     
       
     </>
   )
