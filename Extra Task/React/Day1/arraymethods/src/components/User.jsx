@@ -10,7 +10,12 @@ const User = () => {
       setUserData(e.target.value)
     }
 
-    const filterData = users.filter((users)=>users.id===userdata)
+    const filterData = users.includes.filter((user)=>user.name===userdata.name)
+    
+    console.log(filterData);
+    
+
+
   return (
     <>
 
