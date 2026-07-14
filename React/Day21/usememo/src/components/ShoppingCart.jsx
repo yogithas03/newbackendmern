@@ -42,6 +42,12 @@ const cartItems = [
     productName: "USB-C Charger",
     price: 1299,
     quantity: 2,
+  },
+  {
+    id: 6,
+    productName: "USB-C Charger",
+    price: 2,
+    quantity: 2,
   }
 ]
 
@@ -63,10 +69,12 @@ const filter=(car)=>{
 
 
 
+
 const searchFilter = useMemo(()=>{
     return filter(cartItems)
 },[cartItems])
 
+//console.log(searchFilter);
 
 
   return (
@@ -85,19 +93,20 @@ const searchFilter = useMemo(()=>{
 
    
    <div className='flex gap-7 justify-center m-4'>
-    {searchFilter.map((e,i)=>(
+    {cartItems.map((e,i)=>(
         <div key={i} className='bg-amber-800  text-white p-3 rounded-lg '>
             <p>Product ID:{e.id}</p>
             <p>Product Name{e.productName}</p>
             <p>Product Price:{e.price}</p>
             <p>Product Quantity:{e.quantity}</p>
-            <p>Total:{e.price*e.quantity}</p>
+            
             
            
         </div>
     ))}
     </div>
-
+     
+     {<p>Total:{searchFilter}</p>}
     </div>
 
     

@@ -1,7 +1,7 @@
 // import { useMemo, useState } from "react"
 
 import ProductSearch from "./components/ProductSearch"
-// import ShoppingCart from "./components/ShoppingCart"
+import ShoppingCart from "./components/ShoppingCart"
 
 
 const App = () => {
@@ -72,7 +72,7 @@ const App = () => {
 
     <ProductSearch/>
     <br />
-    {/* <ShoppingCart/> */}
+    <ShoppingCart/>
 
     {/* <div  className={theme?"bg-white text-black":"bg-black text-white"}> */}
 
