@@ -1,34 +1,36 @@
-import { useState } from "react"
+// import { useState } from "react"
+
+import Todo from "./todo/Todo"
 
 
 const App = () => {
 
-  const [formData,setFormData]=useState({course:"",file:""})
+  // const [formData,setFormData]=useState({course:"",file:""})
 
-  const [saveData,setSaveData]=useState([])
+  // const [saveData,setSaveData]=useState([])
 
 
 
-  const handleChange = (e) =>{
+  // const handleChange = (e) =>{
 
-    setFormData({...formData,[e.target.name]:e.target.value})
-  }
+  //   setFormData({...formData,[e.target.name]:e.target.value})
+  // }
 
-  const handleAdd = (e)=>{
-    e.preventDefault()
+  // const handleAdd = (e)=>{
+  //   e.preventDefault()
     
-    const userData = {id:Date.now(),...formData}
+  //   const userData = {id:Date.now(),...formData}
 
-    setSaveData((prev)=>[...prev,userData])
+  //   setSaveData((prev)=>[...prev,userData])
 
-    setFormData({course:"",file:""})
+  //   setFormData({course:"",file:""})
 
 
-  }
+  // }
 
-  const handleEdit=(userId)=>{
-    const editData = saveData
-  }
+  // const handleEdit=(userId)=>{
+  //   const editData = saveData
+  // }
 
 
 
@@ -43,7 +45,7 @@ const App = () => {
   return (
     <>
 
-    <form>
+    {/* <form>
       <input type="text" placeholder="Course Name" name="course" value={formData.course} onChange={handleChange}/>
       <input type="text" placeholder="file Name" name="file" value={formData.file} onChange={handleChange}/>
       <button onClick={handleAdd}>add</button>
@@ -72,7 +74,9 @@ const App = () => {
 
 
 
-    </form>
+    </form> */}
+
+    <Todo/>
       
     </>
   )
