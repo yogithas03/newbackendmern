@@ -66,3 +66,7 @@ export const getUserInfo = async(req,res)=>{
        headers
     })
 }
+
+export const employeeDetails = async(req,res)=>{
+    
+}

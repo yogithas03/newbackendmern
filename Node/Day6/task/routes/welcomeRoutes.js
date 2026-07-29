@@ -31,6 +31,8 @@ route.get('/student/:id',student)
 
 route.post('/userinformation/:id',getUserInfo)
 
+route.get('/employee',)
+
 
 
 
