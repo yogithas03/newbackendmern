@@ -1,7 +1,7 @@
 
 export const getUsers = async(req,res)=>{
     try {
-        console.log("GET request received")
+        console.log("GET request")
         res.send("All Users")
         
     } catch (error) {
@@ -12,7 +12,7 @@ export const getUsers = async(req,res)=>{
 
 export const createUser =async(req,res)=>{
     try {
-         console.log("POST request received")
+         console.log("POST request")
         res.send("User Created")
     } catch (error) {
         

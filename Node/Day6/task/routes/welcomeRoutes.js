@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAuthorization, getmessage, getProducts, getStudent, getUserInfo, idParams, postLogin, postRegister, student } from '../controller/welcomeController.js'
+import { employeeDetails, getAuthorization, getmessage, getProducts, getStudent, getUserInfo, idParams, postLogin, postRegister, student } from '../controller/welcomeController.js'
 
 const route = express.Router()
 
@@ -12,6 +12,7 @@ const route = express.Router()
 //http://localhost:4000/api/message/login
 //http://localhost:4000/api/message/student/101?course=React&batch=Morning
 //http://localhost:4000/api/message/userinformation
+//
 
 route.get("/welcome",getmessage)
 
@@ -31,7 +32,7 @@ route.get('/student/:id',student)
 
 route.post('/userinformation/:id',getUserInfo)
 
-route.get('/employee',)
+route.get('/employee',employeeDetails)
 
 
 

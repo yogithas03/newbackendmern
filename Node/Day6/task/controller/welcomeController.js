@@ -68,5 +68,23 @@ export const getUserInfo = async(req,res)=>{
 }
 
 export const employeeDetails = async(req,res)=>{
+
+    const empdet =req.body
+    const {empID}=req.params
+    const {empDetails}=req.query
+    const Authorization=req.headers
+
+    console.log("params",req.params)
+    console.log("query",req.query)
+    console.log("body",req.body)
+    console.log("headers",req.headers)
+    
+    res.json({
+        body:empdet,
+        params:{empID},
+        query:{empDetails},
+        headers:Authorization
+    })
+
     
 }

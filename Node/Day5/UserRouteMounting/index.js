@@ -12,6 +12,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use("/api/users",userRoutes)
+app.use("/api/products",productRouters)
 
 
 
@@ -24,3 +25,4 @@ app.listen(PORT,()=>{
 
 
 // http://localhost:5000/api/users
+// http://localhost:5000/api/products

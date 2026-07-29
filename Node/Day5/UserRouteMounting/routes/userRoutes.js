@@ -4,12 +4,14 @@ import { createUser, getUsers } from '../controller/userController.js'
 
 const route = express.Router()
 
-// http://localhost:5000/api/getUsers
+// http://localhost:5000/api/users/getUsers
 
-route.get("/",getUsers)
 
-//  http://localhost:5000/api/createUser
 
-route.post("/",createUser)
+route.get("/getUsers",getUsers)
+
+//  http://localhost:5000/api/users/createUser
+
+route.post("/createUser",createUser)
 
 export default route
